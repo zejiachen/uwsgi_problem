@@ -1,0 +1,24 @@
+uwsgi:
+  master: 1
+  vacuum: 1
+  virtualenv: /home/projects/uwsgi_app/virtualenv
+  procname-prefix: uwsgi_app_
+  processes: 6
+  chdir: /home/projects/uwsgi_app
+  wsgi: tinyapp.app
+  need-app: 1
+  lazy-apps: 1
+  disable-logging: true
+  logto2: /home/projects/uwsgi_app/var/log/uwsgi_app.log
+  http-socket: 0.0.0.0:3008
+  stats: 127.0.0.1:4008
+  max-fd: 65535
+  reload-on-rss: 256
+  log-reopen: true
+  log-slow: 1000
+  buffer-size: 32768
+  umask: 027
+  max-requests: 50000
+  worker-reload-mercy: 10
+  listen: 1024
+  harakiri: 20
