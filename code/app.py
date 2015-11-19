@@ -1,7 +1,7 @@
-import webapp2
+from webapp2 import RequestHandler, WSGIApplication
 
-class TestApp(webapp2.RequestHandler):
+class TestApp(RequestHandler):
     def get(self):
         self.response.write('hello world')
 
-application = webapp2.WSGIApplication([('/', TestApp)])
+application = WSGIApplication([('/', TestApp)])
