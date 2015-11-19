@@ -7,7 +7,6 @@ uwsgi:
   chdir: /home/projects/uwsgi_app
   wsgi: tinyapp.app
   need-app: 1
-  lazy-apps: 1
   disable-logging: true
   logto2: /home/projects/uwsgi_app/var/log/uwsgi_app.log
   http-socket: 0.0.0.0:3008

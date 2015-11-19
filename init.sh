@@ -10,5 +10,6 @@ mkdir -p ./var/log
 virtualenv virtualenv
 source virtualenv/bin/activate
 pip install -r ./requirements.txt
-cp -r code virtualenv/lib/python2.7/site-packages/tinyapp
+mkdir -p virtualenv/lib/python2.7/site-packages/tinyapp
+cp -r code/* virtualenv/lib/python2.7/site-packages/tinyapp/
 nginx -s reload
